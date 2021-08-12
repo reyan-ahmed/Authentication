@@ -104,7 +104,7 @@ OR
 
 ```sh
 dotnet run
-
+```
 
 ## Usage
 No need to create authentication from scratch, This project help you to start not from zero. It already have authentication with JWT token. You may use the MVC main application or create your own WEB API. But using identity class library, It may help you alot and this start-up and program file from main application. It have small small things which will save alot of time. Like seeding data, JWT, Role and user managment.
