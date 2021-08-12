@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+ <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0" />
+  </ItemGroup>
+ <ItemGroup>
+   <ProjectReference Include="..\Identity\Identity.csproj">
+     <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+   </ProjectReference>
+ </ItemGroup>
+ <ItemGroup>
+   <Folder Include="Views\User\" />
+   <Folder Include="Utilities\" />
+   <Folder Include="Extenssions\" />
+   <Folder Include="InputDTOs\" />
+   <Folder Include="OutputDTOs\" />
+   <Folder Include="Views\Role\" />
+ </ItemGroup>
+</Project>

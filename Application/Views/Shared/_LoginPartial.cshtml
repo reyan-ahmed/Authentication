@@ -1,0 +1,47 @@
+﻿@if (this.User.Identity.IsAuthenticated)
+
+{
+    if (this.User.IsInRole("Admin"))
+    {
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                <li><a class="dropdown-item" asp-area="" asp-controller="User" asp-action="ListOfUsers">Users</a></li>
+                <li><a class="dropdown-item" asp-area="" asp-controller="Role" asp-action="Index">Roles</a></li>
+                <li><a class="dropdown-item" asp-area="" asp-controller="Role" asp-action="Add">Add Role</a></li>
+
+            </ul>
+        </li>
+
+
+    }
+    if (User.IsInRole("Teacher"))
+    {
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Teacher Menu</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                <li><a class="dropdown-item" asp-area="" asp-controller="Role" asp-action="Index">List</a></li>
+                <li><a class="dropdown-item" asp-area="" asp-controller="Role" asp-action="Add">Add</a></li>
+            </ul>
+        </li>
+    }
+    <li class="nav-item">
+
+        <a class="nav-link active" aria-current="page" asp-area="" asp-controller="User" asp-action="Logout">Logout</a>
+    </li>
+
+}
+else
+{
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">User</a>
+        <ul class="dropdown-menu" aria-labelledby="dropdown03">
+            <li><a class="dropdown-item" asp-area="" asp-controller="User" asp-action="Login">Login</a></li>
+            <li><a class="dropdown-item" asp-area="" asp-controller="User" asp-action="Register">Register</a></li>
+        </ul>
+    </li>
+}
