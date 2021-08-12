@@ -7,8 +7,8 @@
    <img alt="release" src="https://img.shields.io/github/v/release/reyan-ahmed/Authentication?style=flat-square">
    <a href="https://github.com/reyan-ahmed/Authentication/blob/main/LICENSE">
    <img alt="license" src="https://img.shields.io/github/license/reyan-ahmed/Authentication?style=flat-square">
-  <a href="https://www.linkedin.com/in/rehan-ahmed-hashmi/">
-   <img alt="Linkedin" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white?style=flat-square">
+  <a href="#">
+   <img alt="Linkedin" src="https://img.shields.io/github/repo-size/reyan-ahmed/Authentication?style=flat-square">
    
    
 </p>
