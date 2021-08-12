@@ -1,5 +1,19 @@
 # Authentication
 ## Simple project which will provide Authentication with JWT Token
+<p align="center">
+   <a href="https://github.com/reyan-ahmed/Authentication/issues">
+   <img alt="Report Issues" src="https://img.shields.io/bitbucket/issues/reyan-ahmed/Authentication?style=flat-square">
+   <a href="https://goreportcard.com/report/github.com/kha7iq/pingme">
+   <img alt="release" src="https://img.shields.io/github/v/release/reyan-ahmed/Authentication?style=flat-square">
+   <a href="https://github.com/reyan-ahmed/Authentication/blob/main/LICENSE">
+   <img alt="license" src="https://img.shields.io/github/license/reyan-ahmed/Authentication?style=flat-square">
+  <a href="https://www.linkedin.com/in/rehan-ahmed-hashmi/">
+   <img alt="Linkedin" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white?style=flat-square">
+   
+   
+</p>
+
+
 <br />
 
 <p align="center">
