@@ -130,9 +130,4 @@ Contributions are what make the open source community such an amazing place to b
 
 
 
-<!-- CONTACT -->
-## Contact
-Email : reyan_ahmed@outlook.com
-Project Link: [https://github.com/reyanahmedhashmi/Authentication](https://github.com/reyanahmedhashmi/Authentication)
-
 
