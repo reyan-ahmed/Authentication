@@ -43,16 +43,16 @@
     <li>
      <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#How-To-Build">How to Build project</a></li>
+        <li><a href="#How-To-Build-Project">How to Build Project</a></li>
         <li><a href="#How-To-Run-Entity-Core">How to Run Entity Core</a></li>
-        <li><a href="#built-with">How to run this project</a></li>
+        <li><a href="#How-To-Run-This-Project">How To Run This Project</a></li>
       </ul>
     </li>
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-         <li><a href="#built-with">What is identity</a></li>
-        <li><a href="#built-with">coming soon</a></li>
+         <li><a href="#What-Is-Identity">What Is Identity</a></li>
+        <li><a href="#Coming-Soon">Coming Soon</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -67,11 +67,25 @@
 ## About The Project
 I am currently working on it. This will help to seperate the identity framework and handle user and role separately. I also added JWT token, So later if we want to change MVC application to Web API then just add identity class library and run some commands and we good to go.
 
+## What is identity
+ASP.NET Core Identity framework in brief. ASP.NET Core Identity framework is used to implement forms authentication. There are many options to choose from for identifying your users including Windows Authentication and all of the third-party identity providers like Google, Microsoft, Facebook, and GitHub etc
+
+## Coming Soon 
+I am working on few things, which is a part of my roadmap for this project.
+1. Create Online demo for this project.
+2. I want to make it as a Shell so mostly 90% need login and role mininum so just use it as a shell and start create your application using it.
+3. User Profile
+4. Edit of the Role and User
+5. Edit and assign new role to existing user
+6. Many More :)
+   
+
+
 ## Getting Started
 First, Clone this project or fork. And make sure you have dotnet core install. This project is created 3.1.  Please make sure you update the connection string in appsettings. 
 
 
-## How to Build project
+## How to Build Project
 First, Clone this project or fork. Please run the below mentioned commands to build it properly.
 
 1. Clean
@@ -104,7 +118,7 @@ dotnet ef database update -p Identity -s Application -c ApplicationDbContext
 ```
 
 
-## How to run this project
+## How To Run This Project
 We are successfully build and create a database. Now, we can run this project. Please run following command.
 
 1. Run project with watch. Any changes no need to re-build the project
