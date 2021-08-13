@@ -1,8 +1,59 @@
-@{
-    ViewData["Title"] = "Home Page";
-}
+<article class="markdown-section" id="main">
+    <div id="docsify-darklight-theme"><p>.</p></div>
+    <h1 class="display-5 fw-bold">
+        Authentication
+    </h1><p class="lead mb-4">
+        Simple project which will provide Authentication with JWT Token
+    </p><p align="center">
+        <a href="#">
+        </a><a href="https://github.com/othneildrew/Best-README-Template">
+            <img src="~/images/si-advanced-authentication-feature.jpg" alt="Logo" width="80" height="80">
+        </a>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    </p><h3 align="center">Authentication &amp; Authorization with JWT Token</h3>
+
+    <p align="center">
+        This project is to support those who is new in identity &amp; want to use **jwt** token Authentication.
+        <br>
+        <a href="https://github.com/reyanahmedhashmi/Authentication/blob/main/README.md"><strong>Explore the docs »</strong></a>
+        <br>
+        <br>
+        <a href="#">View Demo <b> coming soon</b></a>
+        ·
+        <a href="https://github.com/reyanahmedhashmi/Authentication/issues">Report Bug</a>
+        ·
+        <a href="https://github.com/reyanahmedhashmi/Authentication/issues">Request Feature</a>
+    </p>
+    <p></p>
+
+    <details open="open">
+        <summary>Table of Contents</summary>
+        <ol>
+            <li>
+                <a href="#getting-started">Getting Started</a>
+                <ul>
+                    <li><a href="#How-To-Build">How to Build project</a></li>
+                    <li><a href="#How-To-Run-Entity-Core">How to Run Entity Core</a></li>
+                    <li><a href="#built-with">How to run this project</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#about-the-project">About The Project</a>
+                <ul>
+                    <li><a href="#built-with">What is identity</a></li>
+                    <li><a href="#built-with">coming soon</a></li>
+                </ul>
+            </li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#contributing">Contributing</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#acknowledgements">Acknowledgements</a></li>
+        </ol>
+    </details>
+
+
+    <h2 id="about-the-project"><a href="#/?id=about-the-project" data-id="about-the-project" class="anchor"><span>About The Project</span></a></h2><p>I am currently working on it. This will help to seperate the identity framework and handle user and role separately. I also added JWT token, So later if we want to change MVC application to Web API then just add identity class library and run some commands and we good to go.</p><h2 id="getting-started"><a href="#/?id=getting-started" data-id="getting-started" class="anchor"><span>Getting Started</span></a></h2><p>First, Clone this project or fork. And make sure you have dotnet core install. This project is created 3.1.  Please make sure you update the connection string in appsettings. </p><h2 id="how-to-build-project"><a href="#/?id=how-to-build-project" data-id="how-to-build-project" class="anchor"><span>How to Build project</span></a></h2><p>First, Clone this project or fork. Please run the below mentioned commands to build it properly.</p><ol><li><p>Clean</p><pre v-pre="" data-lang="sh"><code class="lang-sh">dotnet clean</code></pre></li><li><p>Restore dependencies</p><pre v-pre="" data-lang="sh"><code class="lang-sh">dotnet restore</code></pre></li><li><p>Build Project  </p><pre v-pre="" data-lang="sh"><code class="lang-sh">dotnet build</code></pre></li></ol><h2 id="how-to-run-entity-core"><a href="#/?id=how-to-run-entity-core" data-id="how-to-run-entity-core" class="anchor"><span>How to Run Entity Core</span></a></h2><p>Second,  Add migration first then we will create database. As we are using separate project for Identity (DBContext file) . Then we need to explicitly mentioned where is our DBContext file (-c ) and what is our starting application (-s ). I want to keep migration file inside my Data/Migration folder that's why I mentioned (-o Data/Migraions). Please run below mentioned commands.</p><ol><li><p>Add Migration</p><pre v-pre="" data-lang="sh"><code class="lang-sh">dotnet ef migrations add Initial -p Identity -s Application -c ApplicationDbContext -o Data/Migraions</code></pre></li><li><p>Create database</p><pre v-pre="" data-lang="sh"><code class="lang-sh">dotnet ef database update -p Identity -s Application -c ApplicationDbContext </code></pre></li></ol><h2 id="how-to-run-this-project"><a href="#/?id=how-to-run-this-project" data-id="how-to-run-this-project" class="anchor"><span>How to run this project</span></a></h2><p>We are successfully build and create a database. Now, we can run this project. Please run following command.</p><ol><li>Run project with watch. Any changes no need to re-build the project</li></ol><pre v-pre="" data-lang="sh"><code class="lang-sh">dotnet watch run </code></pre><p>OR</p><ol start="2"><li>Simply Run </li></ol><pre v-pre="" data-lang="sh"><code class="lang-sh">dotnet run</code></pre><h2 id="usage"><a href="#/?id=usage" data-id="usage" class="anchor"><span>Usage</span></a></h2><p>No need to create authentication from scratch, This project help you to start not from zero. It already have authentication with JWT token. You may use the MVC main application or create your own WEB API. But using identity class library, It may help you alot and this start-up and program file from main application. It have small small things which will save alot of time. Like seeding data, JWT, Role and user managment.</p><!-- ROADMAP -->
+    <h2 id="roadmap"><a href="#/?id=roadmap" data-id="roadmap" class="anchor"><span>Roadmap</span></a></h2><p>See the <a href="https://github.com/reyanahmedhashmi/Authentication/issues" target="_blank" rel="noopener">open issues</a> for a list of proposed features (and known issues).</p><!-- CONTRIBUTING -->
+    <h2 id="contributing"><a href="#/?id=contributing" data-id="contributing" class="anchor"><span>Contributing</span></a></h2><p>Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are <strong>greatly appreciated</strong>.</p><ol><li>Fork the Project</li><li>Create your Feature Branch (<code>git checkout -b feature/AmazingFeature</code>)</li><li>Commit your Changes (<code>git commit -m 'Add some AmazingFeature'</code>)</li><li>Push to the Branch (<code>git push origin feature/AmazingFeature</code>)</li><li>Open a Pull Request</li></ol>
+</article>

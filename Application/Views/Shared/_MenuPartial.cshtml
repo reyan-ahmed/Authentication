@@ -1,0 +1,57 @@
+﻿<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+    </li>
+    @if (this.User.Identity.IsAuthenticated)
+    {
+        if (this.User.IsInRole("Admin"))
+        {
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Roles</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                    <li><a class="dropdown-item" asp-area="" asp-controller="Role" asp-action="Index">Roles</a></li>
+                    <li><a class="dropdown-item" asp-area="" asp-controller="Role" asp-action="Add">Add Role</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Users</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                    <li><a class="dropdown-item" asp-area="" asp-controller="User" asp-action="ListOfUsers">Users</a></li>
+                </ul>
+            </li>
+        }
+        if (User.IsInRole("Teacher"))
+        {
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Teacher Menu</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                    <li><a class="dropdown-item" asp-area="" asp-controller="Role" asp-action="Index">List</a></li>
+                    <li><a class="dropdown-item" asp-area="" asp-controller="Role" asp-action="Add">Add</a></li>
+                </ul>
+            </li>
+        }
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </li>
+    }
+</ul>
+@if (!this.User.Identity.IsAuthenticated)
+{
+    <div class="col-md-3 text-end">
+        <button type="button" class="btn btn-outline-primary me-2" onclick="location.href='@Url.Action("Login", "User")'">Login</button>
+        <button type="button" class="btn btn-outline-secondary me-2" onclick="location.href='@Url.Action("Register", "User")'">Register</button>
+    </div>
+}
+
+@if (this.User.Identity.IsAuthenticated)
+{
+    <div class="col-md-3 text-end">
+        <span>
+            <p>Welcome @this.User.Identity.Name</p>
+            <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Logout", "User")'">Logout</button>
+
+        </span>
+    </div>
+}

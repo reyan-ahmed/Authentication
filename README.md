@@ -3,7 +3,7 @@
 <p align="center">
    <a href="https://github.com/reyan-ahmed/Authentication/issues">
    <img alt="Report Issues" src="https://img.shields.io/bitbucket/issues/reyan-ahmed/Authentication?style=flat-square">
-   <a href="https://goreportcard.com/report/github.com/kha7iq/pingme">
+   <a href="https://github.com/reyan-ahmed/Authentication/releases">
    <img alt="release" src="https://img.shields.io/github/v/release/reyan-ahmed/Authentication?style=flat-square">
    <a href="https://github.com/reyan-ahmed/Authentication/blob/main/LICENSE">
    <img alt="license" src="https://img.shields.io/github/license/reyan-ahmed/Authentication?style=flat-square">

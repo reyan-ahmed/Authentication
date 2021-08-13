@@ -1,7 +1,5 @@
 ﻿@model List<Identity.Models.Role>;
 
-
-
 <h2>List of Role</h2>
 <div class="table-responsive">
     <table class="table table-striped table-sm">
@@ -19,23 +17,13 @@
                     <td>@item.Id</td>
                     <td>@item.Name</td>
                     <td>
-                        @*@Html.ActionLink("Delete", "Delete", "Role", new { roleName = item.Name })
-        |
-        <a class="nav-link active" aria-current="page" asp-area="" asp-controller="Role" asp-action="Delete">Logout</a>*@
-
-
-                        @Html.ActionLink(
-  "ButtonText",
-  "Delete",                         // controller action
-  "Role",        // controller
-  new { roleName=item.Name },         // action parameters aka route values
-  new { @class = "btn btn-info" }) // html attributes
+                        @Html.ActionLink("Delete", "Delete", "Role", new { roleName = item.Name })
                     </td>
                 </tr>
             }
         </tbody>
     </table>
-   
+
 </div>
 
 

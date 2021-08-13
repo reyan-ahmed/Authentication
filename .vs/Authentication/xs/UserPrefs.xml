@@ -1,25 +1,26 @@
 ﻿<Properties StartupConfiguration="{026BC367-E598-4D11-97B8-F7249A2575ED}|Default">
   <MonoDevelop.Ide.ItemProperties.Application PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Application/Views/User/Login.cshtml">
+    <Files>
+      <File FileName="Application/Views/Role/Add.cshtml" Line="1" Column="1" />
+      <File FileName="Application/Views/User/Login.cshtml" Line="54" Column="48" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Authentication" expanded="True">
             <Node name="Application" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Extenssions" expanded="True" />
-              <Node name="InputDTOs" expanded="True" />
               <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
                 <Node name="Role" expanded="True" />
                 <Node name="Shared" expanded="True" />
-                <Node name="User" expanded="True" />
+                <Node name="User" expanded="True">
+                  <Node name="Login.cshtml" selected="True" />
+                </Node>
               </Node>
-              <Node name="wwwroot" expanded="True" />
             </Node>
             <Node name="Identity" expanded="True">
-              <Node name="Services" expanded="True">
-                <Node name="UserService.cs" selected="True" />
-              </Node>
+              <Node name="Models" expanded="True" />
             </Node>
           </Node>
         </State>
