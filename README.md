@@ -62,25 +62,7 @@
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
-
-
-## About The Project
-I am currently working on it. This will help to seperate the identity framework and handle user and role separately. I also added JWT token, So later if we want to change MVC application to Web API then just add identity class library and run some commands and we good to go.
-
-## What is identity
-ASP.NET Core Identity framework in brief. ASP.NET Core Identity framework is used to implement forms authentication. There are many options to choose from for identifying your users including Windows Authentication and all of the third-party identity providers like Google, Microsoft, Facebook, and GitHub etc
-
-## Coming Soon 
-I am working on few things, which is a part of my roadmap for this project.
-1. Create Online demo for this project.
-2. I want to make it as a Shell so mostly 90% need login and role mininum so just use it as a shell and start create your application using it.
-3. User Profile
-4. Edit of the Role and User
-5. Edit and assign new role to existing user
-6. Many More :)
-   
-
-
+  
 ## Getting Started
 First, Clone this project or fork. And make sure you have dotnet core install. This project is created 3.1.  Please make sure you update the connection string in appsettings. 
 
@@ -133,6 +115,23 @@ OR
 ```sh
 dotnet run
 ```
+
+
+## About The Project
+I am currently working on it. This will help to seperate the identity framework and handle user and role separately. I also added JWT token, So later if we want to change MVC application to Web API then just add identity class library and run some commands and we good to go.
+
+## What is identity
+ASP.NET Core Identity framework in brief. ASP.NET Core Identity framework is used to implement forms authentication. There are many options to choose from for identifying your users including Windows Authentication and all of the third-party identity providers like Google, Microsoft, Facebook, and GitHub etc
+
+## Coming Soon 
+I am working on few things, which is a part of my roadmap for this project.
+1. Create Online demo for this project.
+2. I want to make it as a Shell so mostly 90% need login and role mininum so just use it as a shell and start create your application using it.
+3. User Profile
+4. Edit of the Role and User
+5. Edit and assign new role to existing user
+6. Many More :)
+ 
 
 ## Usage
 No need to create authentication from scratch, This project help you to start not from zero. It already have authentication with JWT token. You may use the MVC main application or create your own WEB API. But using identity class library, It may help you alot and this start-up and program file from main application. It have small small things which will save alot of time. Like seeding data, JWT, Role and user managment.
