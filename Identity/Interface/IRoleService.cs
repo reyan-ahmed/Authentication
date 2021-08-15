@@ -15,5 +15,7 @@ namespace Identity.Interface
         Task<IdentityResult> AssignRole(ApplicationUser applicationUser, string roleId);
         Task<Output> Remove(string roleName);
         Task<SelectList> ListOfRoles();
+        Task<IdentityRole> Get(string roleId);
+        Task Update(IdentityRole identityRole);
     }
 }

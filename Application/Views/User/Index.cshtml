@@ -18,17 +18,20 @@
         <tbody>
             @foreach (var item in Model)
             {
-            <tr>
-                <td>@item.Id</td>
-                <td>@item.UserName</td>
-                <td>@item.Email</td>
-                <td>@item.IsEnabled</td>
-                <td>@item.FullName</td>
-                <td>@Html.ActionLink("Delete", "Delete",  new { id = item.Id })</td>
-            </tr>
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.UserName</td>
+                    <td>@item.Email</td>
+                    <td>@item.IsEnabled</td>
+                    <td>@item.FullName</td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", "User", new { id = item.Id }) |
+                        @Html.ActionLink("Update", "Update", "User", new { userId = item.Id })
+                    </td>
+                </tr>
             }
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 </div>
 
 

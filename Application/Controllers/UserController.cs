@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Application.InputDTOs;
 using Identity.Entities;
 using Identity.Interface;
-using Identity.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 
 namespace Application.Controllers
@@ -92,7 +89,7 @@ namespace Application.Controllers
                 {
                     ViewBag.result = "Record Inserted Successfully!";
                     ModelState.Clear();
-                    return RedirectToAction("ListOfUsers");
+                    return RedirectToAction("Index", "Home");
                 }
 
                 foreach (var error in output.Errors)
@@ -105,8 +102,9 @@ namespace Application.Controllers
             return View(userRegistration);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
-        public async Task<ActionResult> ListOfUsers()
+        public async Task<ActionResult> Index()
         {
             var result = await _userService.GetAll();
             return View(result);
@@ -125,7 +123,7 @@ namespace Application.Controllers
             {
                 ViewBag.result = "Record Inserted Successfully!";
                 ModelState.Clear();
-                return RedirectToAction("ListOfUsers");
+                return RedirectToAction("Index");
             }
 
             foreach (var error in output.Errors)
@@ -134,6 +132,46 @@ namespace Application.Controllers
             }
 
             return View();
+        }
+
+        [HttpGet("Update")]
+        public async Task<ActionResult> Update(string userId)
+        {
+            var result = await _userService.Get(userId);
+            var userResgistration = new UserRegistration()
+            {
+                Email = result.ApplicationUser.Email,
+                FirstName = result.ApplicationUser.FirstName,
+                LastName = result.ApplicationUser.LastName,
+                Id = result.ApplicationUser.Id
+            };
+            return View(userResgistration);
+        }
+
+        [HttpPost("Update")]
+        public async Task<ActionResult> Update(UserRegistration userRegistration)
+        {
+            var applicationUser = await _userService.Get(userRegistration.Id);
+            applicationUser.ApplicationUser.FirstName = userRegistration.FirstName;
+            applicationUser.ApplicationUser.LastName = userRegistration.LastName;
+            applicationUser.ApplicationUser.Email = userRegistration.Email;
+            applicationUser.ApplicationUser.UserName = userRegistration.Email;
+
+            var output = await _userService.Update(applicationUser.ApplicationUser);
+
+            if (output.Result)
+            {
+                ViewBag.result = "Record Update Successfully!";
+                ModelState.Clear();
+                return RedirectToAction("Index");
+            }
+
+            foreach (var error in output.Errors)
+            {
+                ModelState.AddModelError(error.Code, error.Description);
+            }
+
+            return View(userRegistration);
         }
     }
 }

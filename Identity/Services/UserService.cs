@@ -99,14 +99,7 @@ namespace Identity.Services
 
         public async Task<Output> Update(ApplicationUser userRegistration)
         {
-            var user = await Get(userRegistration.Id);
-
-            user.ApplicationUser.FirstName = userRegistration.FirstName;
-            user.ApplicationUser.LastName = userRegistration.LastName;
-            user.ApplicationUser.Email = userRegistration.Email;
-            user.ApplicationUser.UserName = userRegistration.Email;
-
-            var result = await _userManager.UpdateAsync(user.ApplicationUser);
+            var result = await _userManager.UpdateAsync(userRegistration);
             if (!result.Succeeded)
             {
                 var errors = new List<Error>();
@@ -114,9 +107,9 @@ namespace Identity.Services
                 {
                     errors.Add(new Error() { Code = error.Code, Description = error.Description });
                 }
-                return new Output(result.Succeeded, errors, user.ApplicationUser);
+                return new Output(result.Succeeded, errors, userRegistration);
             }
-            return new Output(result.Succeeded, null, user.ApplicationUser);
+            return new Output(result.Succeeded, null, userRegistration);
         }
 
         public async Task<Output> ValidateUser(string username, string password)

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Identity.Entities;
 using Identity.Interface;
@@ -60,6 +61,18 @@ namespace Identity.Services
             var currentUser = await _userManager.FindByNameAsync(applicationUser.UserName);
             var roleresult = await _userManager.AddToRoleAsync(currentUser, role.Name);
             return roleresult;
+        }
+
+        public async Task<IdentityRole> Get(string roleId)
+        {
+
+            var role = await _roleManager.FindByIdAsync(roleId);
+            return role;
+        }
+
+        public async Task Update(IdentityRole identityRole)
+        {
+            await _roleManager.UpdateAsync(identityRole);
         }
 
         public async Task<List<Role>> GetRoles()

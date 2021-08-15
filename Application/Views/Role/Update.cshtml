@@ -1,0 +1,33 @@
+﻿@model Identity.Models.Role;
+
+@Html.ValidationSummary(false, "", new { @class = "invalid-feedback" })
+
+<p>@ViewBag.result</p>
+<h4 class="mb-3">Update Role</h4>
+<div class="row g-5">
+
+    @using (Html.BeginForm("Update", "Role", FormMethod.Post))
+    {
+        <div class="invisible">
+            @Html.TextBoxFor(m => m.Id)
+        </div>
+        <div class="row g-3">
+            <div class="col-sm-12">
+                <label for="firstName" class="form-label">Role Name</label>
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                <div class="invalid-feedback">
+                    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "error" })
+                </div>
+            </div>
+
+            <div class="col-3">
+                <button class="btn btn-primary w-100" type="submit">Update Role</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary w-100" type="reset">Reset</button>
+            </div>
+            <div class="col-6">
+            </div>
+        </div>
+    }
+</div>

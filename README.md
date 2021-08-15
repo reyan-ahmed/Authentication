@@ -52,7 +52,10 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
          <li><a href="#What-Is-Identity">What Is Identity</a></li>
-        <li><a href="#Coming-Soon">Coming Soon</a></li>
+        <li><a href="#User">User</a></li>
+        <li><a href="#Role">Role</a></li>
+        <li><a href="#Permision">Permision</a></li>
+        <li><a href="#Seed-Default-Data">Seed Default Data</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -122,6 +125,18 @@ I am currently working on it. This will help to seperate the identity framework 
 
 ## What is identity
 ASP.NET Core Identity framework in brief. ASP.NET Core Identity framework is used to implement forms authentication. There are many options to choose from for identifying your users including Windows Authentication and all of the third-party identity providers like Google, Microsoft, Facebook, and GitHub etc
+
+## User
+We have Identity User table where all user data will be store. But we created Application user to extend the default identity user property. Like First Name & Last Name there can be add different properties depend on the requirements.  I Added only two property to give an example.
+
+## Role
+We are using here Identity Role default one. As I don't find anything which we need to modify in the defaulty Identity Role. Name and Id is enought to use role. All roles will be store inside Identity Role table.
+
+## Permision
+I have created Admin role which have the permision to add update and delete role and as well as the users. There is another role called default which I will use for the normal user.
+
+## Seed Default Data
+I am seeding some data by default so when you will run this application. Super admin and admin role will be automatically inserted into the database.
 
 ## Coming Soon 
 I am working on few things, which is a part of my roadmap for this project.
